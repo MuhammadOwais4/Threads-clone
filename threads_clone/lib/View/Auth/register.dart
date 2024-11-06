@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:form_validator/form_validator.dart';
 import 'package:get/get.dart';
+import 'package:threads_clone/controllers/auth_controller.dart';
 import 'package:threads_clone/routes/routes_names.dart';
 import 'package:threads_clone/widgets/auth_button.dart';
 import 'package:threads_clone/widgets/auth_header.dart';
@@ -22,13 +23,12 @@ class _RegisterState extends State<Register> {
   final TextEditingController confirmPasswordController =
       TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  AuthController controller = Get.put(AuthController());
 
   void submit() {
     if (_formKey.currentState!.validate()) {
-      print("Submitted");
-    } else {
-      print("Not Submitted");
-    }
+      controller.register(nameController.text, passwordController.text, emailController.text);
+    } 
   }
 
   @override
