@@ -8,4 +8,6 @@ class StorageService extends GetxService {
 
 
  static dynamic usersession=Session.read(StorageKey.usersession);
+
+  static initialize() {}
 }

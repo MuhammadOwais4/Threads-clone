@@ -4,7 +4,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 class SupabaseService extends GetxService {
 
 void onInit()  async{
-Supabase.initialize(url: "https://dtwtczjbyoedojzlzoad.supabase.co", anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR0d3RjempieW9lZG9qemx6b2FkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzA0NjI1NTQsImV4cCI6MjA0NjAzODU1NH0.4VETKkdgpPiDcSu8CGwJshT35Kbmxpsu0aQznnlKwgw");
+ Supabase.initialize(url: "https://dtwtczjbyoedojzlzoad.supabase.co", anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR0d3RjempieW9lZG9qemx6b2FkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzA0NjI1NTQsImV4cCI6MjA0NjAzODU1NH0.4VETKkdgpPiDcSu8CGwJshT35Kbmxpsu0aQznnlKwgw");
 }
 
   static final SupabaseClient client = Supabase.instance.client;

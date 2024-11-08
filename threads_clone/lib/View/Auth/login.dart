@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:form_validator/form_validator.dart';
 import 'package:get/get.dart';
+import 'package:threads_clone/controllers/auth_controller.dart';
 import 'package:threads_clone/routes/routes_names.dart';
 import 'package:threads_clone/widgets/auth_button.dart';
 import 'package:threads_clone/widgets/auth_header.dart';
@@ -20,12 +21,11 @@ class _LoginState extends State<Login> {
   final TextEditingController passwordController = TextEditingController();
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final AuthController controller = Get.put(AuthController());
 
   void login() {
     if (_formKey.currentState!.validate()) {
-      print("Login");
-    } else {
-      print("Error");
+      controller.login(emailController.text, passwordController.text);
     }
   }
 
